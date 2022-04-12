@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rifaraclothstore/pages/cart_page.dart';
+import 'package:rifaraclothstore/pages/detailPage.dart';
 
 import '../product_list.dart';
 import 'homePage.dart';
@@ -86,23 +88,35 @@ class SearchPage extends StatelessWidget {
 
                       Padding(
                         padding: const EdgeInsets.only(right: 16),
-                        child: Container(
-                          width: 40,
-                          height: 40,
-                          decoration: BoxDecoration(
-                            color: Color(0xff2C3545),
-                            borderRadius: BorderRadius.circular(13),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                child: Image.asset(
-                                  'assetsgambar/checkout_item.png',
-                                  width: 28,
-                                ),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.pushReplacement(
+                              context,
+                              PageRouteBuilder(
+                                  pageBuilder:
+                                      (context, animation1, animation2) =>
+                                      CartPage(), transitionDuration: Duration(seconds: 1)
                               ),
-                            ],
+                            );
+                          },
+                          child: Container(
+                            width: 40,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              color: Color(0xff2C3545),
+                              borderRadius: BorderRadius.circular(13),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  child: Image.asset(
+                                    'assetsgambar/checkout_item.png',
+                                    width: 28,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -121,12 +135,24 @@ class SearchPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      ProductList5(
-                          'assetsgambar/product_one.png',
-                          'Nike Air Force X',
-                          'assetsgambar/star.png',
-                          '17',
-                          'Rp1.650.000'),
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushReplacement(
+                            context,
+                            PageRouteBuilder(
+                                pageBuilder:
+                                    (context, animation1, animation2) =>
+                                    DetailPage(), transitionDuration: Duration(seconds: 1)
+                            ),
+                          );
+                        },
+                        child: ProductList5(
+                            'assetsgambar/product_one.png',
+                            'Nike Air Force X',
+                            'assetsgambar/star.png',
+                            '17',
+                            'Rp1.650.000'),
+                      ),
                       ProductList4(
                           'assetsgambar/product_two.png',
                           'Smartwatch 2.0',

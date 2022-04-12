@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rifaraclothstore/pages/homePage.dart';
+import 'package:rifaraclothstore/pages/order_history.dart';
 
 class PaymentSuccess extends StatelessWidget {
   @override
@@ -48,7 +50,16 @@ class PaymentSuccess extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18)),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  PageRouteBuilder(
+                      pageBuilder:
+                          (context, animation1, animation2) =>
+                          OrderHistory(), transitionDuration: Duration(seconds: 1)
+                  ),
+                );
+              },
               child: Text(
                 'Track Order Status',
                 style: GoogleFonts.montserrat(
@@ -71,7 +82,16 @@ class PaymentSuccess extends StatelessWidget {
                   borderRadius: BorderRadius.circular(18),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  PageRouteBuilder(
+                      pageBuilder:
+                          (context, animation1, animation2) =>
+                          HomePage(), transitionDuration: Duration(seconds: 1)
+                  ),
+                );
+              },
               child: Text(
                 'Back to Home',
                 style: GoogleFonts.montserrat(

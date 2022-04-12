@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rifaraclothstore/pages/cart_page.dart';
 import 'package:rifaraclothstore/pages/homePage.dart';
-
+import 'package:rifaraclothstore/pages/profile_page.dart';
 import '../product_list.dart';
+import 'detailPage.dart';
+import 'notification_page.dart';
 
 class ProductPage extends StatelessWidget {
   @override
@@ -27,6 +30,10 @@ class ProductPage extends StatelessWidget {
                           height: 40,
                           child: TextFormField(
                             cursorColor: Colors.white,
+                            style: GoogleFonts.montserrat(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w400
+                            ),
                             decoration: InputDecoration(
                               contentPadding:
                                   EdgeInsets.only(top: 11, bottom: 11),
@@ -51,23 +58,35 @@ class ProductPage extends StatelessWidget {
                       SizedBox(
                         width: 14,
                       ),
-                      Container(
-                        width: 40,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          color: Color(0xff2C3545),
-                          borderRadius: BorderRadius.circular(13),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              child: Image.asset(
-                                'assetsgambar/checkout_item.png',
-                                width: 28,
-                              ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushReplacement(
+                            context,
+                            PageRouteBuilder(
+                                pageBuilder:
+                                    (context, animation1, animation2) =>
+                                    CartPage(), transitionDuration: Duration(seconds: 1)
                             ),
-                          ],
+                          );
+                        },
+                        child: Container(
+                          width: 40,
+                          height: 40,
+                          decoration: BoxDecoration(
+                            color: Color(0xff2C3545),
+                            borderRadius: BorderRadius.circular(13),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                child: Image.asset(
+                                  'assetsgambar/checkout_item.png',
+                                  width: 28,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
@@ -84,12 +103,24 @@ class ProductPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      ProductList5(
-                          'assetsgambar/product_one.png',
-                          'Nike Air Force X',
-                          'assetsgambar/star.png',
-                          '17',
-                          'Rp1.650.000'),
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushReplacement(
+                            context,
+                            PageRouteBuilder(
+                                pageBuilder:
+                                    (context, animation1, animation2) =>
+                                    DetailPage(), transitionDuration: Duration(seconds: 1)
+                            ),
+                          );
+                        },
+                        child: ProductList5(
+                            'assetsgambar/product_one.png',
+                            'Nike Air Force X',
+                            'assetsgambar/star.png',
+                            '17',
+                            'Rp1.650.000'),
+                      ),
                       ProductList4(
                           'assetsgambar/product_two.png',
                           'Smartwatch 2.0',
@@ -190,27 +221,63 @@ class ProductPage extends StatelessWidget {
           BottomNavigationBarItem(
               icon: Padding(
                 padding: const EdgeInsets.only(top: 8, bottom: 8),
-                child: Image.asset(
-                  'assetsgambar/product-16px-filled.png',
-                  width: 16,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation1, animation2) =>
+                              ProductPage(), transitionDuration: Duration(seconds: 1)
+                      ),
+                    );
+                  },
+                  child: Image.asset(
+                    'assetsgambar/product-16px-filled.png',
+                    width: 16,
+                  ),
                 ),
               ),
               label: 'Products'),
           BottomNavigationBarItem(
               icon: Padding(
                 padding: const EdgeInsets.only(top: 8, bottom: 8),
-                child: Image.asset(
-                  'assetsgambar/notification-16px-outline.png',
-                  width: 16,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation1, animation2) =>
+                              NotificationPage(), transitionDuration: Duration(seconds: 1)
+                      ),
+                    );
+                  },
+                  child: Image.asset(
+                    'assetsgambar/notification-16px-outline.png',
+                    width: 16,
+                  ),
                 ),
               ),
               label: 'Notification'),
           BottomNavigationBarItem(
               icon: Padding(
                 padding: const EdgeInsets.only(top: 8, bottom: 8),
-                child: Image.asset(
-                  'assetsgambar/profile-16px-outline.png',
-                  width: 16,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation1, animation2) =>
+                              ProfilePage(), transitionDuration: Duration(seconds: 1)
+                      ),
+                    );
+                  },
+                  child: Image.asset(
+                    'assetsgambar/profile-16px-outline.png',
+                    width: 16,
+                  ),
                 ),
               ),
               label: 'Profile'),

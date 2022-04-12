@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rifaraclothstore/pages/cart_page.dart';
+import 'package:rifaraclothstore/pages/order_history.dart';
 import 'package:rifaraclothstore/pages/payment_success.dart';
 
-class OrderDetail extends StatelessWidget {
+import 'cart_page.dart';
+
+class GreyCancel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +40,7 @@ class OrderDetail extends StatelessWidget {
                                   PageRouteBuilder(
                                       pageBuilder:
                                           (context, animation1, animation2) =>
-                                              CartPage(),
+                                          OrderHistory(),
                                       transitionDuration: Duration(seconds: 1)),
                                 );
                               },
@@ -93,7 +95,7 @@ class OrderDetail extends StatelessWidget {
 
                 Padding(
                   padding:
-                      const EdgeInsets.only(left: 15.0, top: 16.0, right: 15.0),
+                  const EdgeInsets.only(left: 15.0, top: 16.0, right: 15.0),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -151,7 +153,7 @@ class OrderDetail extends StatelessWidget {
 
                 Padding(
                   padding:
-                      const EdgeInsets.only(top: 24.0, left: 15.0, right: 15.0),
+                  const EdgeInsets.only(top: 24.0, left: 15.0, right: 15.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -395,7 +397,7 @@ class OrderDetail extends StatelessWidget {
               height: 47,
               child: TextButton(
                 style: TextButton.styleFrom(
-                    backgroundColor: Color(0xff6C5ECF),
+                    backgroundColor: Color(0xffcfcfcf),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18),
                     )),
@@ -408,9 +410,9 @@ class OrderDetail extends StatelessWidget {
                   );
                 },
                 child: Text(
-                  'Checkout',
+                  'Cancel Order',
                   style: GoogleFonts.montserrat(
-                    color: Color(0xffF8F7FD),
+                    color: Color(0xff68687a),
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                   ),

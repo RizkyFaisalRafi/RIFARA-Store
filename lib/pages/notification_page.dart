@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rifaraclothstore/notification_style.dart';
 import 'package:rifaraclothstore/pages/homePage.dart';
 import 'package:rifaraclothstore/pages/product_page.dart';
+import 'package:rifaraclothstore/pages/profile_page.dart';
 
 class NotificationPage extends StatelessWidget {
   @override
@@ -117,9 +118,21 @@ class NotificationPage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: Padding(
               padding: const EdgeInsets.only(top: 8, bottom: 8),
-              child: Image.asset(
-                'assetsgambar/home-16px-outline.png',
-                width: 16,
+              child: InkWell(
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    PageRouteBuilder(
+                        pageBuilder:
+                            (context, animation1, animation2) =>
+                            HomePage(), transitionDuration: Duration(seconds: 1)
+                    ),
+                  );
+                },
+                child: Image.asset(
+                  'assetsgambar/home-16px-outline.png',
+                  width: 16,
+                ),
               ),
             ),
             label: 'Home',
@@ -174,9 +187,21 @@ class NotificationPage extends StatelessWidget {
           BottomNavigationBarItem(
               icon: Padding(
                 padding: const EdgeInsets.only(top: 8, bottom: 8),
-                child: Image.asset(
-                  'assetsgambar/profile-16px-outline.png',
-                  width: 16,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation1, animation2) =>
+                              ProfilePage(), transitionDuration: Duration(seconds: 1)
+                      ),
+                    );
+                  },
+                  child: Image.asset(
+                    'assetsgambar/profile-16px-outline.png',
+                    width: 16,
+                  ),
                 ),
               ),
               label: 'Profile'

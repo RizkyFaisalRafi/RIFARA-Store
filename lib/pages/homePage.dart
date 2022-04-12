@@ -6,6 +6,7 @@ import 'package:rifaraclothstore/categories_style.dart';
 import 'package:rifaraclothstore/pages/cart_page.dart';
 import 'package:rifaraclothstore/pages/notification_page.dart';
 import 'package:rifaraclothstore/pages/product_page.dart';
+import 'package:rifaraclothstore/pages/profile_page.dart';
 import 'package:rifaraclothstore/pages/searchPage.dart';
 import 'package:rifaraclothstore/product_list.dart';
 
@@ -35,6 +36,10 @@ class HomePage extends StatelessWidget {
                           height: 40,
                           child: TextFormField(
                             cursorColor: Colors.white,
+                            style: GoogleFonts.montserrat(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w400
+                            ),
                             decoration: InputDecoration(
                               contentPadding:
                                   EdgeInsets.only(top: 11, bottom: 11),
@@ -233,6 +238,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
+
             Padding(
               padding:
                   const EdgeInsets.only(top: 32.0, left: 16.0, right: 16.0),
@@ -258,6 +264,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
+
             Padding(
               padding: const EdgeInsets.all(20),
               child: Row(
@@ -453,9 +460,21 @@ class HomePage extends StatelessWidget {
           BottomNavigationBarItem(
               icon: Padding(
                 padding: const EdgeInsets.only(top: 8, bottom: 8),
-                child: Image.asset(
-                  'assetsgambar/profile-16px-outline.png',
-                  width: 16,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation1, animation2) =>
+                              ProfilePage(), transitionDuration: Duration(seconds: 1)
+                      ),
+                    );
+                  },
+                  child: Image.asset(
+                    'assetsgambar/profile-16px-outline.png',
+                    width: 16,
+                  ),
                 ),
               ),
               label: 'Profile'

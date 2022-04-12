@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rifaraclothstore/pages/cart_page.dart';
 import 'package:rifaraclothstore/pages/homePage.dart';
+import 'package:rifaraclothstore/pages/order_detail.dart';
 import 'package:rifaraclothstore/product_list.dart';
 import 'package:rifaraclothstore/variations_tile.dart';
+
 
 class DetailPage extends StatelessWidget {
   @override
@@ -81,10 +84,22 @@ class DetailPage extends StatelessWidget {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Container(
-                                child: Image.asset(
-                                  'assetsgambar/checkout_item.png',
-                                  width: 28,
+                              InkWell(
+                                onTap: () {
+                                  Navigator.pushReplacement(
+                                    context,
+                                    PageRouteBuilder(
+                                        pageBuilder:
+                                            (context, animation1, animation2) =>
+                                            CartPage(), transitionDuration: Duration(seconds: 1)
+                                    ),
+                                  );
+                                },
+                                child: Container(
+                                  child: Image.asset(
+                                    'assetsgambar/checkout_item.png',
+                                    width: 28,
+                                  ),
                                 ),
                               ),
                             ],
@@ -331,12 +346,24 @@ class DetailPage extends StatelessWidget {
             ),
 
             BottomNavigationBarItem(
-              icon: Padding(
-                padding: const EdgeInsets.only(left: 30),
-                child: Image.asset(
-                  'assetsgambar/add_to_cart-24px-white.png',
-                  width: 34,
-                  height: 32,
+              icon: InkWell(
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    PageRouteBuilder(
+                        pageBuilder:
+                            (context, animation1, animation2) =>
+                                CartPage(), transitionDuration: Duration(seconds: 1)
+                    ),
+                  );
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 30),
+                  child: Image.asset(
+                    'assetsgambar/add_to_cart-24px-white.png',
+                    width: 34,
+                    height: 32,
+                  ),
                 ),
               ),
               label: '',
@@ -353,9 +380,18 @@ class DetailPage extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(18),
                       )),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation1, animation2) =>
+                              OrderDetail(), transitionDuration: Duration(seconds: 1)
+                      ),
+                    );
+                  },
                   child: Text(
-                    'Checkout',
+                    'Buy Now',
                     style: GoogleFonts.montserrat(
                       color: Color(0xffF8F7FD),
                       fontWeight: FontWeight.bold,
