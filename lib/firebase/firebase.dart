@@ -1,11 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:rifaraclothstore/pages/cancel_order_page.dart';
-import 'package:rifaraclothstore/pages/grey_cancel.dart';
 import 'package:rifaraclothstore/pages/login_page.dart';
-import 'package:rifaraclothstore/pages/rate_order_page.dart';
-import 'package:rifaraclothstore/pages/splash_screen.dart';
-
 
 class FirebaseApps extends StatefulWidget {
   const FirebaseApps({Key? key}) : super(key: key);

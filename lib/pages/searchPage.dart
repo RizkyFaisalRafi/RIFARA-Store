@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rifaraclothstore/pages/cart_page.dart';
 import 'package:rifaraclothstore/pages/detailPage.dart';
-
 import '../product_list.dart';
 import 'homePage.dart';
 

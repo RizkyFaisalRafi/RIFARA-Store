@@ -167,7 +167,6 @@ class OrderHistory extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-
                                 Image.asset(
                                   'assetsgambar/product_one.png',
                                   width: 115,

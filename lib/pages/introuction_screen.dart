@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:rifaraclothstore/firebase/firebase.dart';
-import 'login_page.dart';
 
 
 class IntroScreen extends StatelessWidget {

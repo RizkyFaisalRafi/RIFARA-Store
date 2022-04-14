@@ -220,7 +220,7 @@ class OrderAgain extends StatelessWidget {
                         child: Row(
                           children: [
                             Image.asset(
-                              'assetsgambar/product_one.png',
+                              'assetsgambar/product_two.png',
                             ),
                             Padding(
                               padding: const EdgeInsets.only(
@@ -232,7 +232,7 @@ class OrderAgain extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Nike Air Force X',
+                                    'Smartwatch 2.0',
                                     style: GoogleFonts.montserrat(
                                         color: Color(0xfff8f7fd),
                                         fontWeight: FontWeight.bold),
@@ -241,7 +241,7 @@ class OrderAgain extends StatelessWidget {
                                     height: 12,
                                   ),
                                   Text(
-                                    'Rp1.650.000 x1',
+                                    'Rp4.500.000 x1',
                                     style: GoogleFonts.montserrat(
                                         color: Color(0xfff8f7fd),
                                         fontWeight: FontWeight.w500),
