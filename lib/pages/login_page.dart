@@ -1,13 +1,39 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rifaraclothstore/pages/homePage.dart';
 import 'package:rifaraclothstore/pages/register_page.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
 
+class _LoginPageState extends State<LoginPage> {
+
+  // Login Function
+  static Future<User?> loginUsingEmailPassword(
+      {required String email, required String password, required BuildContext context})async{
+    FirebaseAuth auth = FirebaseAuth.instance;
+    User? user;
+    try{
+      UserCredential userCredential = await auth.signInWithEmailAndPassword(email: email, password: password);
+      user = userCredential.user;
+    } on FirebaseAuthException catch (e){
+      if(e.code == "User Not Found"){
+        print("No User For That Email");
+      }
+    }
+    return user;
+  }
   @override
   Widget build(BuildContext context) {
+    // Create the textfield controller
+    TextEditingController _emailController = TextEditingController();
+    TextEditingController _passwordController  = TextEditingController();
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color(0xff030E22),
@@ -58,6 +84,7 @@ class LoginPage extends StatelessWidget {
                     width: 295,
                     height: 40,
                     child: TextFormField(
+                      controller: _emailController,
                       cursorColor: Colors.white,
                       style: GoogleFonts.montserrat(
                           color: Colors.white,
@@ -90,6 +117,7 @@ class LoginPage extends StatelessWidget {
                     width: 295,
                     height: 40,
                     child: TextFormField(
+                      controller: _passwordController,
                       cursorColor: Colors.white,
                       obscureText: true, // menjadikan Password tidak terlihat
                       style: GoogleFonts.montserrat(
@@ -123,7 +151,7 @@ class LoginPage extends StatelessWidget {
                   child: Row(
                     children: [
                       Image.asset('assetsgambar/mini_rectangle.png',
-                      width: 20,
+                        width: 20,
                       ),
                       SizedBox(width: 10,),
                       Text(
@@ -156,22 +184,26 @@ class LoginPage extends StatelessWidget {
                   height: 47,
                   child: TextButton(
                     style: TextButton.styleFrom(
-                      backgroundColor: Color(0xff6c5ecf),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18),
-                      )
+                        backgroundColor: Color(0xff6c5ecf),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18),
+                        )
                     ),
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
-                      },
-                      child: Text(
-                          'Login',
-                        style: GoogleFonts.montserrat(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
+                    onPressed: () async{
+                      User? user = await loginUsingEmailPassword(email: _emailController.text, password: _passwordController.text, context: context);
+                      print(user);
+                      if(user != null){
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomePage()));
+                      }
+                    },
+                    child: Text(
+                      'Login',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
                       ),
+                    ),
                   ),
                 ),
               ),
@@ -218,3 +250,5 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
+
+

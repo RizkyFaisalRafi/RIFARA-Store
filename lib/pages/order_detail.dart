@@ -218,7 +218,7 @@ class OrderDetail extends StatelessWidget {
                         child: Row(
                           children: [
                             Image.asset(
-                              'assetsgambar/product_one.png',
+                              'assetsgambar/product_two.png',
                             ),
                             Padding(
                               padding: const EdgeInsets.only(

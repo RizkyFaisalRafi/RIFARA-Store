@@ -163,7 +163,7 @@ class CartPage extends StatelessWidget {
                     ),
                     child: Row(
                       children: [
-                        Image.asset('assetsgambar/product_one.png'),
+                        Image.asset('assetsgambar/product_two.png'),
                         Padding(
                           padding: const EdgeInsets.only(left: 16, top: 20),
                           child: Column(

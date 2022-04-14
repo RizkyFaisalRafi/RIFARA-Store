@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "61139939161",
+    "project_id": "kynelin-store",
+    "storage_bucket": "kynelin-store.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61139939161:android:7a3a8fe8c51ae68d512648",
+        "android_client_info": {
+          "package_name": "com.rifaraclothstore.rifaraclothstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61139939161-e137bucda5tf8ns1pofjm3pk23agais5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAm8gDXnnpUoyObQbhrJXhokGPdhqyvplo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61139939161-e137bucda5tf8ns1pofjm3pk23agais5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

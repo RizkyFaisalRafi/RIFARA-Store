@@ -13,7 +13,6 @@ import 'package:rifaraclothstore/product_list.dart';
 import 'detailPage.dart';
 
 class HomePage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
