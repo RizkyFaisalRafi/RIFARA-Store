@@ -279,12 +279,12 @@ class DetailPage extends StatelessWidget {
                                 'assetsgambar/star.png',
                                 '17',
                                 'Rp1.650.000'),
-                            ProductList5(
-                                'assetsgambar/product_one.png',
-                                'Nike Air Force X',
+                            ProductList4(
+                                'assetsgambar/product_two.png',
+                                'Smartwatch 2.0',
                                 'assetsgambar/star.png',
                                 '17',
-                                'Rp1.650.000'),
+                                'Rp4.500.000'),
                           ],
                         ),
                         SizedBox(
@@ -294,17 +294,17 @@ class DetailPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             ProductList5(
-                                'assetsgambar/product_one.png',
-                                'Nike Air Force X',
+                                'assetsgambar/product_three.png',
+                                'Philips LED WI-FI',
                                 'assetsgambar/star.png',
                                 '17',
-                                'Rp1.650.000'),
-                            ProductList5(
-                                'assetsgambar/product_one.png',
-                                'Nike Air Force X',
+                                'Rp85.000'),
+                            ProductList4(
+                                'assetsgambar/product_four.png',
+                                'Garnier Pure Act',
                                 'assetsgambar/star.png',
                                 '17',
-                                'Rp1.650.000'),
+                                'Rp27.839'),
                           ],
                         ),
                         SizedBox(

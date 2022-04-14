@@ -170,7 +170,7 @@ class CartPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Nike Air Force X',
+                                'Smartwatch 2.0',
                                 style: GoogleFonts.montserrat(
                                   color: Color(0xffF8F7FD),
                                   fontWeight: FontWeight.bold,
@@ -214,7 +214,7 @@ class CartPage extends StatelessWidget {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Text(
-              'Rp6.150.000',
+              'Rp3.300.000',
               style: GoogleFonts.montserrat(
                 color: Color(0xffF8F7FD),
                 fontWeight: FontWeight.bold,

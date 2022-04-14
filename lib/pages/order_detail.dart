@@ -230,7 +230,7 @@ class OrderDetail extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Nike Air Force X',
+                                    'Smartwatch 2.0',
                                     style: GoogleFonts.montserrat(
                                         color: Color(0xfff8f7fd),
                                         fontWeight: FontWeight.bold),
@@ -239,7 +239,7 @@ class OrderDetail extends StatelessWidget {
                                     height: 12,
                                   ),
                                   Text(
-                                    'Rp1.650.000 x1',
+                                    'Rp4.500.000 x1',
                                     style: GoogleFonts.montserrat(
                                         color: Color(0xfff8f7fd),
                                         fontWeight: FontWeight.w500),
