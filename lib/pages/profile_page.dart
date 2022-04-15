@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rifaraclothstore/categories_style.dart';
+import 'package:rifaraclothstore/style/categories_style.dart';
 import 'package:rifaraclothstore/pages/create_address.dart';
 import 'package:rifaraclothstore/pages/edit_profile.dart';
 import 'package:rifaraclothstore/pages/homePage.dart';

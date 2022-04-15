@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rifaraclothstore/pages/cart_page.dart';
 import 'package:rifaraclothstore/pages/homePage.dart';
 import 'package:rifaraclothstore/pages/profile_page.dart';
-import '../product_list.dart';
-import 'detailPage.dart';
+import '../style/product_list.dart';
+import 'DetailScreen/detailPage.dart';
 import 'notification_page.dart';
 
 class ProductPage extends StatelessWidget {

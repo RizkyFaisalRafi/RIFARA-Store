@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rifaraclothstore/form_style.dart';
+import 'package:rifaraclothstore/style/form_style.dart';
 import 'package:rifaraclothstore/pages/profile_page.dart';
 
 class EditProfile extends StatelessWidget {

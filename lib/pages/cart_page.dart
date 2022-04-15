@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rifaraclothstore/pages/DetailScreen/detailPage.dart';
+import 'package:rifaraclothstore/pages/DetailScreen/detailPage2.dart';
 import 'package:rifaraclothstore/pages/order_detail.dart';
-
 
 class CartPage extends StatelessWidget {
   @override
@@ -94,105 +95,123 @@ class CartPage extends StatelessWidget {
             Center(
               child: Column(
                 children: [
-                  Container(
-                    width: 348,
-                    height: 115,
-                    decoration: BoxDecoration(
-                      color: Color(0xff2C3545),
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: Row(
-                      children: [
-                        Image.asset('assetsgambar/product_one.png'),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 16, top: 20),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Nike Air Force X',
-                                style: GoogleFonts.montserrat(
-                                  color: Color(0xffF8F7FD),
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 14,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DetailPage()),
+                      );
+                    },
+                    child: Container(
+                      width: 348,
+                      height: 115,
+                      decoration: BoxDecoration(
+                        color: Color(0xff2C3545),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: Row(
+                        children: [
+                          Image.asset('assetsgambar/product_one.png'),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 16, top: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Nike Air Force X',
+                                  style: GoogleFonts.montserrat(
+                                    color: Color(0xffF8F7FD),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 14,
+                                  ),
                                 ),
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              Text(
-                                'Rp1.650.000',
-                                style: GoogleFonts.montserrat(
-                                  color: Color(0xffF8F7FD),
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 14,
+                                SizedBox(
+                                  height: 8,
                                 ),
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(left: 120, top: 12),
-                                child: Image.asset(
-                                  'assetsgambar/plusmin_icon.png',
-                                  width: 66,
-                                  height: 28,
+                                Text(
+                                  'Rp1.650.000',
+                                  style: GoogleFonts.montserrat(
+                                    color: Color(0xffF8F7FD),
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 14,
+                                  ),
                                 ),
-                              )
-                            ],
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(left: 120, top: 12),
+                                  child: Image.asset(
+                                    'assetsgambar/plusmin_icon.png',
+                                    width: 66,
+                                    height: 28,
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(
                     height: 16,
                   ),
-                  Container(
-                    width: 348,
-                    height: 115,
-                    decoration: BoxDecoration(
-                      color: Color(0xff2C3545),
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: Row(
-                      children: [
-                        Image.asset('assetsgambar/product_two.png'),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 16, top: 20),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Smartwatch 2.0',
-                                style: GoogleFonts.montserrat(
-                                  color: Color(0xffF8F7FD),
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 14,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DetailPage2()),
+                      );
+                    },
+                    child: Container(
+                      width: 348,
+                      height: 115,
+                      decoration: BoxDecoration(
+                        color: Color(0xff2C3545),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: Row(
+                        children: [
+                          Image.asset('assetsgambar/product_two.png'),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 16, top: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Smartwatch 2.0',
+                                  style: GoogleFonts.montserrat(
+                                    color: Color(0xffF8F7FD),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 14,
+                                  ),
                                 ),
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              Text(
-                                'Rp4.500.000',
-                                style: GoogleFonts.montserrat(
-                                  color: Color(0xffF8F7FD),
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 14,
+                                SizedBox(
+                                  height: 8,
                                 ),
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(left: 120, top: 12),
-                                child: Image.asset(
-                                  'assetsgambar/plusmin_icon.png',
-                                  width: 66,
-                                  height: 28,
+                                Text(
+                                  'Rp4.500.000',
+                                  style: GoogleFonts.montserrat(
+                                    color: Color(0xffF8F7FD),
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 14,
+                                  ),
                                 ),
-                              )
-                            ],
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(left: 120, top: 12),
+                                  child: Image.asset(
+                                    'assetsgambar/plusmin_icon.png',
+                                    width: 66,
+                                    height: 28,
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ],

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rifaraclothstore/notification_style.dart';
+import 'package:rifaraclothstore/style/notification_style.dart';
 import 'package:rifaraclothstore/pages/homePage.dart';
 import 'package:rifaraclothstore/pages/product_page.dart';
 import 'package:rifaraclothstore/pages/profile_page.dart';

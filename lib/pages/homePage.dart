@@ -2,15 +2,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rifaraclothstore/categories_style.dart';
+import 'package:rifaraclothstore/pages/DetailScreen/detailPag4.dart';
+import 'package:rifaraclothstore/pages/DetailScreen/detailPage2.dart';
+import 'package:rifaraclothstore/pages/DetailScreen/detailPage3.dart';
+import 'package:rifaraclothstore/pages/DetailScreen/detailPage5.dart';
+import 'package:rifaraclothstore/pages/DetailScreen/detailPage6.dart';
+import 'package:rifaraclothstore/style/categories_style.dart';
 import 'package:rifaraclothstore/pages/cart_page.dart';
 import 'package:rifaraclothstore/pages/notification_page.dart';
 import 'package:rifaraclothstore/pages/product_page.dart';
 import 'package:rifaraclothstore/pages/profile_page.dart';
 import 'package:rifaraclothstore/pages/searchPage.dart';
-import 'package:rifaraclothstore/product_list.dart';
+import 'package:rifaraclothstore/style/product_list.dart';
 
-import 'detailPage.dart';
+import 'DetailScreen/detailPage.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -299,11 +304,7 @@ class HomePage extends StatelessWidget {
                         onTap: () {
                           Navigator.push(
                             context,
-                            PageRouteBuilder(
-                                pageBuilder:
-                                    (context, animation1, animation2) =>
-                                    DetailPage(), transitionDuration: Duration(seconds: 1)
-                            ),
+                            MaterialPageRoute(builder: (context) => DetailPage()),
                           );
                         },
                         child: ProductList5(
@@ -314,12 +315,20 @@ class HomePage extends StatelessWidget {
                             'Rp1.650.000'
                         ),
                       ),
-                      ProductList4(
-                          'assetsgambar/product_two.png',
-                          'Smartwatch 2.0',
-                          'assetsgambar/star.png',
-                          '17',
-                          'Rp4.500.000'),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => DetailPage2()),
+                          );
+                        },
+                        child: ProductList4(
+                            'assetsgambar/product_two.png',
+                            'Smartwatch 2.0',
+                            'assetsgambar/star.png',
+                            '17',
+                            'Rp4.500.000'),
+                      ),
                     ],
                   ),
                   SizedBox(
@@ -328,18 +337,34 @@ class HomePage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      ProductList5(
-                          'assetsgambar/product_three.png',
-                          'Philips LED WI-FI',
-                          'assetsgambar/star.png',
-                          '17',
-                          'Rp85.000'),
-                      ProductList4(
-                          'assetsgambar/product_four.png',
-                          'Garnier Pure Act',
-                          'assetsgambar/star.png',
-                          '17',
-                          'Rp27.839'),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => DetailPage3()),
+                          );
+                        },
+                        child: ProductList5(
+                            'assetsgambar/product_three.png',
+                            'Philips LED WI-FI',
+                            'assetsgambar/star.png',
+                            '17',
+                            'Rp85.000'),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => DetailPage4()),
+                          );
+                        },
+                        child: ProductList4(
+                            'assetsgambar/product_four.png',
+                            'Garnier Pure Act',
+                            'assetsgambar/star.png',
+                            '17',
+                            'Rp27.839'),
+                      ),
                     ],
                   ),
                   SizedBox(
@@ -348,14 +373,33 @@ class HomePage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      ProductList5(
-                          'assetsgambar/product_five.png',
-                          'Rexus Headphone',
-                          'assetsgambar/star.png',
-                          '17',
-                          'Rp800.000'),
-                      ProductList4('assetsgambar/product_six.png', 'Airpods',
-                          'assetsgambar/star.png', '17', 'Rp5.500.000'),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => DetailPage5()),
+                          );
+                        },
+                        child: ProductList5(
+                            'assetsgambar/product_five.png',
+                            'Rexus Headphone',
+                            'assetsgambar/star.png',
+                            '17',
+                            'Rp800.000'),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => DetailPage6()),
+                          );
+                        },
+                        child: ProductList4(
+                            'assetsgambar/product_six.png',
+                            'Airpods',
+                            'assetsgambar/star.png',
+                            '17', 'Rp5.500.000'),
+                      ),
                     ],
                   ),
                   SizedBox(

@@ -1,13 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rifaraclothstore/pages/DetailScreen/detailPag4.dart';
+import 'package:rifaraclothstore/pages/DetailScreen/detailPage.dart';
+import 'package:rifaraclothstore/pages/DetailScreen/detailPage2.dart';
+import 'package:rifaraclothstore/pages/DetailScreen/detailPage3.dart';
 import 'package:rifaraclothstore/pages/cart_page.dart';
 import 'package:rifaraclothstore/pages/order_detail.dart';
-import 'package:rifaraclothstore/product_list.dart';
-import 'package:rifaraclothstore/variations_tile.dart';
+import 'package:rifaraclothstore/style/product_list.dart';
+import 'package:rifaraclothstore/style/variations_tile.dart';
 
 
-class DetailPage extends StatelessWidget {
+class DetailPage6 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,7 +104,7 @@ class DetailPage extends StatelessWidget {
               ),
             ),
             Image.asset(
-              'assetsgambar/product_one.png',
+              'assetsgambar/product_six.png',
               width: 375,
               height: 350,
             ),
@@ -120,7 +124,7 @@ class DetailPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Nike Air Force X',
+                    'Airpods',
                     style: GoogleFonts.montserrat(
                         color: Colors.white,
                         fontSize: 18,
@@ -149,14 +153,14 @@ class DetailPage extends StatelessWidget {
                         height: 14,
                       ),
                       Image.asset(
-                        'assetsgambar/star.png',
+                        'assetsgambar/star_kosong.png',
                         width: 14,
                         height: 14,
                       ),
                       SizedBox(
                         width: 5,
                       ),
-                      Text('16',
+                      Text('17',
                           style: GoogleFonts.montserrat(
                             color: Color(0xffcfcfcf),
                             fontSize: 14,
@@ -170,7 +174,7 @@ class DetailPage extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'Rp1.650.000',
+                        'Rp5.500.000',
                         style: GoogleFonts.montserrat(
                           color: Color(0xffF8F7FD),
                           fontSize: 18,
@@ -181,7 +185,7 @@ class DetailPage extends StatelessWidget {
                         width: 6,
                       ),
                       Text(
-                        'Rp2.650.000',
+                        'Rp6.500.000',
                         style: GoogleFonts.montserrat(
                             color: Color(0xffF8F7FD),
                             fontSize: 14,
@@ -207,11 +211,11 @@ class DetailPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      VariationsStyle('36'),
-                      VariationsStyleNoSide('37'),
-                      VariationsStyleNoSide('38'),
-                      VariationsStyleNoSide('39'),
-                      VariationsStyleNoSide('40'),
+                      VariationsStyle('White'),
+                      VariationsStyleNoSide('Red'),
+                      VariationsStyleNoSide('Blue'),
+                      VariationsStyleNoSide('Black'),
+                      VariationsStyleNoSide('Purple'),
                     ],
                   ),
                   SizedBox(
@@ -232,7 +236,7 @@ class DetailPage extends StatelessWidget {
                         height: 16,
                       ),
                       Text(
-                        'This shoes material is canvas press with foam\nmat, bring back your high school moment with\nthis shoes. Choose your size and just wait for it.',
+                        'These Airpods are Earpods with cool sound,\nloud and quality bass, Enjoy your fun in music.\nChoose your color and just wait.',
                         style: GoogleFonts.montserrat(
                           color: Color(0xffF8F7FD),
                           fontSize: 14,
@@ -261,18 +265,36 @@ class DetailPage extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            ProductList5(
-                                'assetsgambar/product_one.png',
-                                'Nike Air Force X',
-                                'assetsgambar/star.png',
-                                '17',
-                                'Rp1.650.000'),
-                            ProductList4(
-                                'assetsgambar/product_two.png',
-                                'Smartwatch 2.0',
-                                'assetsgambar/star.png',
-                                '17',
-                                'Rp4.500.000'),
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => DetailPage()),
+                                );
+                              },
+                              child: ProductList5(
+                                  'assetsgambar/product_one.png',
+                                  'Nike Air Force X',
+                                  'assetsgambar/star.png',
+                                  '17',
+                                  'Rp1.650.000'),
+                            ),
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => DetailPage2()),
+                                );
+                              },
+                              child: ProductList4(
+                                  'assetsgambar/product_two.png',
+                                  'Smartwatch 2.0',
+                                  'assetsgambar/star.png',
+                                  '17',
+                                  'Rp4.500.000'),
+                            ),
                           ],
                         ),
                         SizedBox(
@@ -281,18 +303,36 @@ class DetailPage extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            ProductList5(
-                                'assetsgambar/product_three.png',
-                                'Philips LED WI-FI',
-                                'assetsgambar/star.png',
-                                '17',
-                                'Rp85.000'),
-                            ProductList4(
-                                'assetsgambar/product_four.png',
-                                'Garnier Pure Act',
-                                'assetsgambar/star.png',
-                                '17',
-                                'Rp27.839'),
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => DetailPage3()),
+                                );
+                              },
+                              child: ProductList5(
+                                  'assetsgambar/product_three.png',
+                                  'Philips LED WI-FI',
+                                  'assetsgambar/star.png',
+                                  '17',
+                                  'Rp85.000'),
+                            ),
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => DetailPage4()),
+                                );
+                              },
+                              child: ProductList4(
+                                  'assetsgambar/product_four.png',
+                                  'Garnier Pure Act',
+                                  'assetsgambar/star.png',
+                                  '17',
+                                  'Rp27.839'),
+                            ),
                           ],
                         ),
                         SizedBox(
@@ -323,7 +363,7 @@ class DetailPage extends StatelessWidget {
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Text(
-                'Rp1.650.000',
+                'Rp5.500.000',
                 style: GoogleFonts.montserrat(
                   color: Color(0xffF8F7FD),
                   fontWeight: FontWeight.bold,
