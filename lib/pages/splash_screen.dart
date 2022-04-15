@@ -17,7 +17,7 @@ class _splashScreenState extends State<splashScreen> {
   void initState() {
     // memberikan Delay splashscreen kemudian menuju ke halaman berikutnya
     super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 4), () {
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
           return IntroScreen();
         }));
@@ -33,7 +33,7 @@ class _splashScreenState extends State<splashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'assetsgambar/logo_app.png',
+              'assetsgambar/logoaplikasi.png',
               height: 130,
             ),
             const SizedBox(

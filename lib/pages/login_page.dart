@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                     padding: const EdgeInsets.only(top: 10.0),
                     child: Container(
                         child: Center(
-                            child: Image.asset('assetsgambar/logo_app.png', width: 200,height: 200,)
+                            child: Image.asset('assetsgambar/logoaplikasi.png', width: 200,height: 200,)
                         )
                     ),
                   )

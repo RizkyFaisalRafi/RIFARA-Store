@@ -30,7 +30,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   padding: const EdgeInsets.only(top: 20.0),
                   child: Container(
                       child: Center(
-                          child: Image.asset('assetsgambar/logo_app.png', width: 200,)
+                          child: Image.asset('assetsgambar/logoaplikasi.png', width: 200,)
                       )
                   ),
                 )
