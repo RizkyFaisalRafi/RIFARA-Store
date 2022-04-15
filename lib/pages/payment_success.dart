@@ -51,13 +51,9 @@ class PaymentSuccess extends StatelessWidget {
                     borderRadius: BorderRadius.circular(18)),
               ),
               onPressed: () {
-                Navigator.pushReplacement(
+                Navigator.push(
                   context,
-                  PageRouteBuilder(
-                      pageBuilder:
-                          (context, animation1, animation2) =>
-                          OrderHistory(), transitionDuration: Duration(seconds: 1)
-                  ),
+                  MaterialPageRoute(builder: (context) => OrderHistory()),
                 );
               },
               child: Text(
@@ -83,13 +79,9 @@ class PaymentSuccess extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Navigator.pushReplacement(
+                Navigator.push(
                   context,
-                  PageRouteBuilder(
-                      pageBuilder:
-                          (context, animation1, animation2) =>
-                          HomePage(), transitionDuration: Duration(seconds: 1)
-                  ),
+                  MaterialPageRoute(builder: (context) => HomePage()),
                 );
               },
               child: Text(

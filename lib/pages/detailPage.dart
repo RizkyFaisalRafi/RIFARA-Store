@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rifaraclothstore/pages/cart_page.dart';
-import 'package:rifaraclothstore/pages/homePage.dart';
 import 'package:rifaraclothstore/pages/order_detail.dart';
 import 'package:rifaraclothstore/product_list.dart';
 import 'package:rifaraclothstore/variations_tile.dart';
@@ -37,14 +36,7 @@ class DetailPage extends StatelessWidget {
                           padding: const EdgeInsets.all(9.0),
                           child: InkWell(
                               onTap: () {
-                                Navigator.pushReplacement(
-                                  context,
-                                  PageRouteBuilder(
-                                      pageBuilder:
-                                          (context, animation1, animation2) =>
-                                              HomePage(),
-                                      transitionDuration: Duration(seconds: 1)),
-                                );
+                                Navigator.pop(context);
                               },
                               child: Image.asset(
                                   'assetsgambar/back-24px-white.png')),
@@ -86,13 +78,9 @@ class DetailPage extends StatelessWidget {
                             children: [
                               InkWell(
                                 onTap: () {
-                                  Navigator.pushReplacement(
+                                  Navigator.push(
                                     context,
-                                    PageRouteBuilder(
-                                        pageBuilder:
-                                            (context, animation1, animation2) =>
-                                            CartPage(), transitionDuration: Duration(seconds: 1)
-                                    ),
+                                    MaterialPageRoute(builder: (context) => CartPage()),
                                   );
                                 },
                                 child: Container(
@@ -348,13 +336,9 @@ class DetailPage extends StatelessWidget {
             BottomNavigationBarItem(
               icon: InkWell(
                 onTap: () {
-                  Navigator.pushReplacement(
+                  Navigator.push(
                     context,
-                    PageRouteBuilder(
-                        pageBuilder:
-                            (context, animation1, animation2) =>
-                                CartPage(), transitionDuration: Duration(seconds: 1)
-                    ),
+                    MaterialPageRoute(builder: (context) => CartPage()),
                   );
                 },
                 child: Padding(
@@ -381,13 +365,9 @@ class DetailPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(18),
                       )),
                   onPressed: () {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                       context,
-                      PageRouteBuilder(
-                          pageBuilder:
-                              (context, animation1, animation2) =>
-                              OrderDetail(), transitionDuration: Duration(seconds: 1)
-                      ),
+                      MaterialPageRoute(builder: (context) => OrderDetail()),
                     );
                   },
                   child: Text(

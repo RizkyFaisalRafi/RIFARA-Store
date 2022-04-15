@@ -22,6 +22,7 @@ class IntroScreen extends StatelessWidget {
           fontSize: 24.0,
           fontWeight: FontWeight.bold,
         ),
+
       ),
     ),
 
@@ -39,13 +40,13 @@ class IntroScreen extends StatelessWidget {
           fontSize: 24.0,
           fontWeight: FontWeight.bold,
         ),
+        // bodyTextStyle: buat warna
       ),
     ),
 
     PageViewModel(
       title: 'Quality Brand',
       body: 'Quality and branded\nclothes at affordable\nprices.',
-
       image: Center(
         child: Image.asset('assetsgambar/onboarding03-illustration-310px.png',
           height: 290,
@@ -75,15 +76,18 @@ class IntroScreen extends StatelessWidget {
             activeSize: Size.square(20),
             activeColor: Colors.red
           ),
-
           showDoneButton: true,
           done: const Text('Done', style: TextStyle(fontSize: 20),),
           showSkipButton: true,
-          skip: const Text('Skip', style: TextStyle(fontSize: 20),),
+          skip: const Text('Skip', style: TextStyle(
+              fontSize: 20,
+            ),
+          ),
           showNextButton: true,
           next: const Icon(Icons.arrow_forward, size: 20,),
           onDone: () =>  onDone(context),
           curve: Curves.bounceOut, // Memberikan efek slide
+          // globalBackgroundColor: Colors.blue,
 
 
         ),

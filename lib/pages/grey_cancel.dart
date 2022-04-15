@@ -4,8 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rifaraclothstore/pages/order_history.dart';
 import 'package:rifaraclothstore/pages/payment_success.dart';
 
-import 'cart_page.dart';
-
 class GreyCancel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -35,13 +33,9 @@ class GreyCancel extends StatelessWidget {
                           padding: const EdgeInsets.all(9.0),
                           child: InkWell(
                               onTap: () {
-                                Navigator.pushReplacement(
+                                Navigator.push(
                                   context,
-                                  PageRouteBuilder(
-                                      pageBuilder:
-                                          (context, animation1, animation2) =>
-                                          OrderHistory(),
-                                      transitionDuration: Duration(seconds: 1)),
+                                  MaterialPageRoute(builder: (context) => OrderHistory()),
                                 );
                               },
                               child: Image.asset(
@@ -402,11 +396,9 @@ class GreyCancel extends StatelessWidget {
                       borderRadius: BorderRadius.circular(18),
                     )),
                 onPressed: () {
-                  Navigator.pushReplacement(
+                  Navigator.push(
                     context,
-                    PageRouteBuilder(
-                        pageBuilder: (context, animation1, animation2) =>
-                            PaymentSuccess(), transitionDuration: Duration(seconds: 1)),
+                    MaterialPageRoute(builder: (context) => PaymentSuccess()),
                   );
                 },
                 child: Text(

@@ -1,6 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:rifaraclothstore/pages/homePage.dart';
 import 'package:rifaraclothstore/pages/login_page.dart';
+
+FirebaseAuth _auth = FirebaseAuth.instance;
 
 class FirebaseApps extends StatefulWidget {
   const FirebaseApps({Key? key}) : super(key: key);
@@ -23,7 +27,11 @@ class _FirebasesAppAppState extends State<FirebaseApps> {
         future: _initializeFirebase(),
         builder: (context, snapshot) {
           if(snapshot.connectionState == ConnectionState.done){
-            return LoginPage();
+            if(_auth.currentUser != null){
+              return HomePage();
+            }else{
+              return LoginPage();
+            }
           }
           return const Center(
             child: CircularProgressIndicator(),

@@ -1,8 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:rifaraclothstore/pages/cancel_order_page.dart';
-import 'package:rifaraclothstore/pages/grey_cancel.dart';
-import 'package:rifaraclothstore/pages/rate_order_page.dart';
 import 'package:rifaraclothstore/pages/splash_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+
 
 void main() {
   runApp(const EcommerceApp());

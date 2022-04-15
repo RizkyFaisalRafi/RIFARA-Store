@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,7 +11,11 @@ import 'package:rifaraclothstore/pages/notification_page.dart';
 import 'package:rifaraclothstore/pages/product_page.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  final FirebaseAuth auth = FirebaseAuth.instance;
+
+
+
+  ProfilePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +50,7 @@ class ProfilePage extends StatelessWidget {
                   height: 16,
                 ),
                 Text(
-                  'Rizky Faisal Rafi',
+                  auth.currentUser!.email.toString(),
                   style: GoogleFonts.montserrat(
                     color: Colors.white,
                     fontSize: 16,
@@ -97,13 +102,9 @@ class ProfilePage extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 56, left: 15, right: 15),
                   child: InkWell(
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                         context,
-                        PageRouteBuilder(
-                            pageBuilder:
-                                (context, animation1, animation2) =>
-                                EditProfile(), transitionDuration: Duration(seconds: 1)
-                        ),
+                        MaterialPageRoute(builder: (context) => EditProfile()),
                       );
                     },
                     child: Column(
@@ -142,13 +143,9 @@ class ProfilePage extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 28, left: 15, right: 15),
                   child: InkWell(
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                         context,
-                        PageRouteBuilder(
-                            pageBuilder:
-                                (context, animation1, animation2) =>
-                                    CreateAddress(), transitionDuration: Duration(seconds: 1)
-                        ),
+                        MaterialPageRoute(builder: (context) => CreateAddress()),
                       );
                     },
                     child: Column(
@@ -197,7 +194,10 @@ class ProfilePage extends StatelessWidget {
                           )
                       ),
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context){
+                          FirebaseAuth.instance.signOut();
+                          return LoginPage();
+                        }));
                       },
                       child: Text(
                         'Logout',

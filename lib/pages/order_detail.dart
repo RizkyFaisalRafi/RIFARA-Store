@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rifaraclothstore/pages/cart_page.dart';
 import 'package:rifaraclothstore/pages/payment_success.dart';
 
 class OrderDetail extends StatelessWidget {
@@ -33,14 +32,7 @@ class OrderDetail extends StatelessWidget {
                           padding: const EdgeInsets.all(9.0),
                           child: InkWell(
                               onTap: () {
-                                Navigator.pushReplacement(
-                                  context,
-                                  PageRouteBuilder(
-                                      pageBuilder:
-                                          (context, animation1, animation2) =>
-                                              CartPage(),
-                                      transitionDuration: Duration(seconds: 1)),
-                                );
+                                Navigator.pop(context);
                               },
                               child: Image.asset(
                                   'assetsgambar/back-24px-white.png')),
@@ -400,11 +392,9 @@ class OrderDetail extends StatelessWidget {
                       borderRadius: BorderRadius.circular(18),
                     )),
                 onPressed: () {
-                  Navigator.pushReplacement(
+                  Navigator.push(
                     context,
-                    PageRouteBuilder(
-                        pageBuilder: (context, animation1, animation2) =>
-                            PaymentSuccess(), transitionDuration: Duration(seconds: 1)),
+                    MaterialPageRoute(builder: (context) => PaymentSuccess()),
                   );
                 },
                 child: Text(

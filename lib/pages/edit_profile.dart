@@ -33,14 +33,7 @@ class EditProfile extends StatelessWidget {
                         padding: const EdgeInsets.all(9.0),
                         child: InkWell(
                             onTap: () {
-                              Navigator.pushReplacement(
-                                context,
-                                PageRouteBuilder(
-                                    pageBuilder:
-                                        (context, animation1, animation2) =>
-                                            ProfilePage(),
-                                    transitionDuration: Duration(seconds: 1)),
-                              );
+                              Navigator.pop(context);
                             },
                             child: Image.asset(
                                 'assetsgambar/back-24px-white.png')),

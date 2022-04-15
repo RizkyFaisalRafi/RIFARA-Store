@@ -60,13 +60,9 @@ class ProductPage extends StatelessWidget {
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.pushReplacement(
+                          Navigator.push(
                             context,
-                            PageRouteBuilder(
-                                pageBuilder:
-                                    (context, animation1, animation2) =>
-                                    CartPage(), transitionDuration: Duration(seconds: 1)
-                            ),
+                            MaterialPageRoute(builder: (context) => CartPage()),
                           );
                         },
                         child: Container(
@@ -105,13 +101,9 @@ class ProductPage extends StatelessWidget {
                     children: [
                       InkWell(
                         onTap: () {
-                          Navigator.pushReplacement(
+                          Navigator.push(
                             context,
-                            PageRouteBuilder(
-                                pageBuilder:
-                                    (context, animation1, animation2) =>
-                                    DetailPage(), transitionDuration: Duration(seconds: 1)
-                            ),
+                            MaterialPageRoute(builder: (context) => DetailPage()),
                           );
                         },
                         child: ProductList5(

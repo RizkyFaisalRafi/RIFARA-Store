@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'introuction_screen.dart';
 
+
 class splashScreen extends StatefulWidget {
   const splashScreen({Key? key}) : super(key: key);
 
@@ -17,9 +18,9 @@ class _splashScreenState extends State<splashScreen> {
     // memberikan Delay splashscreen kemudian menuju ke halaman berikutnya
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-        return IntroScreen();
-      }));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+          return IntroScreen();
+        }));
     });
   }
 

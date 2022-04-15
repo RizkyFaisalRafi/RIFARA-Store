@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rifaraclothstore/pages/order_detail.dart';
 
-import 'homePage.dart';
 
 class CartPage extends StatelessWidget {
   @override
@@ -34,14 +33,7 @@ class CartPage extends StatelessWidget {
                           padding: const EdgeInsets.all(9.0),
                           child: InkWell(
                               onTap: () {
-                                Navigator.pushReplacement(
-                                  context,
-                                  PageRouteBuilder(
-                                      pageBuilder:
-                                          (context, animation1, animation2) =>
-                                              HomePage(),
-                                      transitionDuration: Duration(seconds: 1)),
-                                );
+                                Navigator.pop(context);
                               },
                               child: Image.asset(
                                   'assetsgambar/back-24px-white.png')),
@@ -181,7 +173,7 @@ class CartPage extends StatelessWidget {
                                 height: 8,
                               ),
                               Text(
-                                'Rp1.650.000',
+                                'Rp4.500.000',
                                 style: GoogleFonts.montserrat(
                                   color: Color(0xffF8F7FD),
                                   fontWeight: FontWeight.w500,
@@ -214,7 +206,7 @@ class CartPage extends StatelessWidget {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Text(
-              'Rp3.300.000',
+              'Rp6.150.000',
               style: GoogleFonts.montserrat(
                 color: Color(0xffF8F7FD),
                 fontWeight: FontWeight.bold,
@@ -234,12 +226,9 @@ class CartPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(18),
                     )),
                 onPressed: () {
-                  Navigator.pushReplacement(
+                  Navigator.push(
                     context,
-                    PageRouteBuilder(
-                        pageBuilder: (context, animation1, animation2) =>
-                            OrderDetail(),
-                        transitionDuration: Duration(seconds: 1)),
+                    MaterialPageRoute(builder: (context) => OrderDetail()),
                   );
                 },
                 child: Text(

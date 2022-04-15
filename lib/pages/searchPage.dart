@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rifaraclothstore/pages/cart_page.dart';
 import 'package:rifaraclothstore/pages/detailPage.dart';
 import '../product_list.dart';
-import 'homePage.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({Key? key}) : super(key: key);
@@ -37,14 +36,7 @@ class SearchPage extends StatelessWidget {
                           padding: const EdgeInsets.all(9.0),
                           child: InkWell(
                               onTap: () {
-                                Navigator.pushReplacement(
-                                  context,
-                                  PageRouteBuilder(
-                                      pageBuilder:
-                                          (context, animation1, animation2) =>
-                                          HomePage(), transitionDuration: Duration(seconds: 1)
-                                  ),
-                                );
+                                Navigator.pop(context);
                               },
                               child: Image.asset('assetsgambar/back-24px-white.png')
                           ),
@@ -89,13 +81,9 @@ class SearchPage extends StatelessWidget {
                         padding: const EdgeInsets.only(right: 16),
                         child: InkWell(
                           onTap: () {
-                            Navigator.pushReplacement(
+                            Navigator.push(
                               context,
-                              PageRouteBuilder(
-                                  pageBuilder:
-                                      (context, animation1, animation2) =>
-                                      CartPage(), transitionDuration: Duration(seconds: 1)
-                              ),
+                              MaterialPageRoute(builder: (context) => CartPage()),
                             );
                           },
                           child: Container(
@@ -136,13 +124,9 @@ class SearchPage extends StatelessWidget {
                     children: [
                       InkWell(
                         onTap: () {
-                          Navigator.pushReplacement(
+                          Navigator.push(
                             context,
-                            PageRouteBuilder(
-                                pageBuilder:
-                                    (context, animation1, animation2) =>
-                                    DetailPage(), transitionDuration: Duration(seconds: 1)
-                            ),
+                            MaterialPageRoute(builder: (context) => DetailPage()),
                           );
                         },
                         child: ProductList5(

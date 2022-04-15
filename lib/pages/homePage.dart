@@ -54,13 +54,9 @@ class HomePage extends StatelessWidget {
                               ),
                               prefixIcon: InkWell(
                                 onTap: () {
-                                  Navigator.pushReplacement(
+                                  Navigator.push(
                                     context,
-                                    PageRouteBuilder(
-                                        pageBuilder:
-                                            (context, animation1, animation2) =>
-                                            SearchPage(), transitionDuration: Duration(seconds: 1)
-                                    ),
+                                    MaterialPageRoute(builder: (context) => SearchPage()),
                                   );
                                 },
                                 child: Icon(
@@ -87,13 +83,9 @@ class HomePage extends StatelessWidget {
                           children: [
                             InkWell(
                               onTap: () {
-                                Navigator.pushReplacement(
+                                Navigator.push(
                                   context,
-                                  PageRouteBuilder(
-                                      pageBuilder:
-                                          (context, animation1, animation2) =>
-                                          CartPage(), transitionDuration: Duration(seconds: 1)
-                                  ),
+                                  MaterialPageRoute(builder: (context) => CartPage()),
                                 );
                               },
                               child: Container(
@@ -305,7 +297,7 @@ class HomePage extends StatelessWidget {
                     children: [
                       InkWell(
                         onTap: () {
-                          Navigator.pushReplacement(
+                          Navigator.push(
                             context,
                             PageRouteBuilder(
                                 pageBuilder:

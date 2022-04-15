@@ -1,10 +1,22 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rifaraclothstore/pages/login_page.dart';
 
-class RegisterPage extends StatelessWidget {
 
+class RegisterPage extends StatefulWidget {
+  final String title = 'Registration';
+
+  @override
+  State<RegisterPage> createState() => _RegisterPageState();
+}
+
+class _RegisterPageState extends State<RegisterPage> {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  bool? _success;
+  String? _userEmail;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -86,6 +98,7 @@ class RegisterPage extends StatelessWidget {
                   width: 295,
                   height: 40,
                   child: TextFormField(
+                    controller: _emailController,
                     cursorColor: Colors.white,
                     style: GoogleFonts.montserrat(
                         color: Colors.white,
@@ -118,6 +131,7 @@ class RegisterPage extends StatelessWidget {
                   width: 295,
                   height: 40,
                   child: TextFormField(
+                    controller: _passwordController,
                     cursorColor: Colors.white,
                     obscureText: true, // menjadikan Password tidak terlihat
                     style: GoogleFonts.montserrat(
@@ -188,8 +202,9 @@ class RegisterPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(18),
                         )
                     ),
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                    onPressed: () async {
+                        _register();
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => LoginPage()));
                     },
                     child: Text(
                       'Register',
@@ -198,7 +213,6 @@ class RegisterPage extends StatelessWidget {
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
-
                     ),
                   ),
                 ),
@@ -247,4 +261,31 @@ class RegisterPage extends StatelessWidget {
       ),
     );
   }
+
+
+  void _register() async {
+    final UserCredential? user = await
+    FirebaseAuth.instance.createUserWithEmailAndPassword(
+      email: _emailController.text,
+      password: _passwordController.text,
+    );
+    if (user != null) {
+      setState(() {
+        _success = true;
+        _userEmail = user.user?.email;
+      });
+    } else {
+      setState(() {
+        _success = true;
+      });
+    }
+  }
+
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
 }
+
+
