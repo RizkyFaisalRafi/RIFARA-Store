@@ -28,47 +28,7 @@ class DetailPage2 extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        width: 40,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          color: Color(0xff2C3545),
-                          borderRadius: BorderRadius.circular(13),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(9.0),
-                          child: InkWell(
-                              onTap: () {
-                                Navigator.pop(context);
-                              },
-                              child: Image.asset(
-                                  'assetsgambar/back-24px-white.png')),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 46,
-                      ),
-                      Center(
-                        child: Container(
-                          child: Center(
-                            child: Text(
-                              'Detail',
-                              style: GoogleFonts.montserrat(
-                                  color: Colors.white,
-                                  fontSize: 19,
-                                  fontWeight: FontWeight.w800),
-                            ),
-                          ),
-                          width: 167,
-                          height: 40,
-                          decoration: BoxDecoration(color: Colors.transparent),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 46,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 16),
+                      Flexible(
                         child: Container(
                           width: 40,
                           height: 40,
@@ -76,24 +36,70 @@ class DetailPage2 extends StatelessWidget {
                             color: Color(0xff2C3545),
                             borderRadius: BorderRadius.circular(13),
                           ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              InkWell(
+                          child: Padding(
+                            padding: const EdgeInsets.all(9.0),
+                            child: InkWell(
                                 onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder: (context) => CartPage()),
-                                  );
+                                  Navigator.pop(context);
                                 },
-                                child: Container(
-                                  child: Image.asset(
-                                    'assetsgambar/checkout_item.png',
-                                    width: 28,
+                                child: Image.asset(
+                                    'assetsgambar/back-24px-white.png')),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 46,
+                      ),
+                      Flexible(
+                        child: Center(
+                          child: Container(
+                            child: Center(
+                              child: Text(
+                                'Detail',
+                                style: GoogleFonts.montserrat(
+                                    color: Colors.white,
+                                    fontSize: 19,
+                                    fontWeight: FontWeight.w800),
+                              ),
+                            ),
+                            width: 167,
+                            height: 40,
+                            decoration: BoxDecoration(color: Colors.transparent),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 46,
+                      ),
+                      Flexible(
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 15),
+                          child: Container(
+                            width: 40,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              color: Color(0xff2C3545),
+                              borderRadius: BorderRadius.circular(13),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => CartPage()),
+                                    );
+                                  },
+                                  child: Container(
+                                    child: Image.asset(
+                                      'assetsgambar/checkout_item.png',
+                                      width: 28,
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),

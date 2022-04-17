@@ -9,91 +9,105 @@ class PaymentSuccess extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff030E22),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 170,
-          ),
-          Center(
-            child: Image.asset(
-              'assetsgambar/payment_success-illustration.png',
-              width: 210,
-              height: 235,
-            ),
-          ),
-          SizedBox(
-            height: 32,
-          ),
-          Text(
-            'Payment Success',
-            style: GoogleFonts.montserrat(
-                color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(
-            height: 12,
-          ),
-          Text(
-            'hoorayyy!! your payment was successful!\njust wait for it to arrive soon!',
-            style: GoogleFonts.montserrat(
-                color: Color(0xffCFCFCF), fontWeight: FontWeight.w400),
-            textAlign: TextAlign.center,
-          ),
-          SizedBox(
-            height: 50,
-          ),
-          Container(
-            width: 295,
-            height: 47,
-            child: TextButton(
-              style: TextButton.styleFrom(
-                backgroundColor: Color(0xff6C5ECF),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18)),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => OrderHistory()),
-                );
-              },
-              child: Text(
-                'Track Order Status',
-                style: GoogleFonts.montserrat(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 15,
-          ),
-          Container(
-            width: 295,
-            height: 47,
-            child: TextButton(
-              style: TextButton.styleFrom(
-                backgroundColor: Color(0xff030E22),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18),
+      body: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Flexible(
+              flex: 3,
+              child: Center(
+                child: Image.asset(
+                  'assetsgambar/payment_success-illustration.png',
+                  width: 210,
+                  height: 235,
                 ),
               ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
-                );
-              },
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Flexible(
               child: Text(
-                'Back to Home',
+                'Payment Success',
                 style: GoogleFonts.montserrat(
-                    color: Color(0xff6C5ECF),
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold),
+                    color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),
-          ),
-        ],
+            SizedBox(
+              height: 10,
+            ),
+            Flexible(
+              flex: 2,
+              child: Text(
+                'hoorayyy!! your payment was successful!\njust wait for it to arrive soon!',
+                style: GoogleFonts.montserrat(
+                    color: Color(0xffCFCFCF), fontWeight: FontWeight.w400),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+              height: 45,
+            ),
+            Flexible(
+              flex: 2,
+              child: Container(
+                width: 295,
+                height: 47,
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Color(0xff6C5ECF),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18)),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => OrderHistory()),
+                    );
+                  },
+                  child: Text(
+                    'Track Order Status',
+                    style: GoogleFonts.montserrat(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Flexible(
+              flex: 2,
+              child: Container(
+                width: 295,
+                height: 47,
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Color(0xff030E22),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomePage()),
+                    );
+                  },
+                  child: Text(
+                    'Back to Home',
+                    style: GoogleFonts.montserrat(
+                        color: Color(0xff6C5ECF),
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

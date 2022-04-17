@@ -23,47 +23,7 @@ class CartPage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        width: 40,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          color: Color(0xff2C3545),
-                          borderRadius: BorderRadius.circular(13),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(9.0),
-                          child: InkWell(
-                              onTap: () {
-                                Navigator.pop(context);
-                              },
-                              child: Image.asset(
-                                  'assetsgambar/back-24px-white.png')),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 46,
-                      ),
-                      Center(
-                        child: Container(
-                          child: Center(
-                            child: Text(
-                              'Cart',
-                              style: GoogleFonts.montserrat(
-                                  color: Colors.white,
-                                  fontSize: 19,
-                                  fontWeight: FontWeight.w800),
-                            ),
-                          ),
-                          width: 167,
-                          height: 40,
-                          decoration: BoxDecoration(color: Colors.transparent),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 46,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 16),
+                      Flexible(
                         child: Container(
                           width: 40,
                           height: 40,
@@ -71,16 +31,62 @@ class CartPage extends StatelessWidget {
                             color: Color(0xff2C3545),
                             borderRadius: BorderRadius.circular(13),
                           ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
+                          child: Padding(
+                            padding: const EdgeInsets.all(9.0),
+                            child: InkWell(
+                                onTap: () {
+                                  Navigator.pop(context);
+                                },
                                 child: Image.asset(
-                                  'assetsgambar/checkout_item.png',
-                                  width: 28,
-                                ),
+                                    'assetsgambar/back-24px-white.png')),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 46,
+                      ),
+                      Flexible(
+                        child: Center(
+                          child: Container(
+                            child: Center(
+                              child: Text(
+                                'Cart',
+                                style: GoogleFonts.montserrat(
+                                    color: Colors.white,
+                                    fontSize: 19,
+                                    fontWeight: FontWeight.w800),
                               ),
-                            ],
+                            ),
+                            width: 167,
+                            height: 40,
+                            decoration: BoxDecoration(color: Colors.transparent),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 46,
+                      ),
+                      Flexible(
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 16),
+                          child: Container(
+                            width: 40,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              color: Color(0xff2C3545),
+                              borderRadius: BorderRadius.circular(13),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  child: Image.asset(
+                                    'assetsgambar/checkout_item.png',
+                                    width: 28,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
