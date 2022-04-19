@@ -4,7 +4,7 @@ import 'package:rifaraclothstore/pages/cart_page.dart';
 import 'package:rifaraclothstore/pages/homePage.dart';
 import 'package:rifaraclothstore/pages/profile_page.dart';
 import '../style/product_list.dart';
-import 'DetailScreen/detailPage.dart';
+import 'detail_screen/detailPage.dart';
 import 'notification_page.dart';
 
 class ProductPage extends StatelessWidget {

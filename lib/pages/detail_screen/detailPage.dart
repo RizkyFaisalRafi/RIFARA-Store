@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPag4.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage2.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage3.dart';
+import 'package:rifaraclothstore/pages/detail_screen/detailPage3.dart';
 import 'package:rifaraclothstore/pages/cart_page.dart';
 import 'package:rifaraclothstore/pages/order_detail.dart';
 import 'package:rifaraclothstore/style/product_list.dart';
 import 'package:rifaraclothstore/style/variations_tile.dart';
+
+import 'detailPag4.dart';
+import 'detailPage2.dart';
 
 class DetailPage extends StatelessWidget {
   @override

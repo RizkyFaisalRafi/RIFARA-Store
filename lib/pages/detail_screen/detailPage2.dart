@@ -1,16 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage2.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage3.dart';
 import 'package:rifaraclothstore/pages/cart_page.dart';
 import 'package:rifaraclothstore/pages/order_detail.dart';
 import 'package:rifaraclothstore/style/product_list.dart';
 import 'package:rifaraclothstore/style/variations_tile.dart';
 
+import 'detailPag4.dart';
+import 'detailPage.dart';
+import 'detailPage3.dart';
 
-class DetailPage4 extends StatelessWidget {
+
+class DetailPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -109,7 +110,7 @@ class DetailPage4 extends StatelessWidget {
               ),
             ),
             Image.asset(
-              'assetsgambar/product_four.png',
+              'assetsgambar/product_two.png',
               width: 375,
               height: 350,
             ),
@@ -129,7 +130,7 @@ class DetailPage4 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Garnier Pure Act',
+                    'Smartwatch 2.0',
                     style: GoogleFonts.montserrat(
                         color: Colors.white,
                         fontSize: 18,
@@ -179,7 +180,7 @@ class DetailPage4 extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'Rp27.839',
+                        'Rp4.500.000',
                         style: GoogleFonts.montserrat(
                           color: Color(0xffF8F7FD),
                           fontSize: 18,
@@ -190,7 +191,7 @@ class DetailPage4 extends StatelessWidget {
                         width: 6,
                       ),
                       Text(
-                        'Rp30.000',
+                        'Rp5.600.000',
                         style: GoogleFonts.montserrat(
                             color: Color(0xffF8F7FD),
                             fontSize: 14,
@@ -216,11 +217,11 @@ class DetailPage4 extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      VariationsStyle('Foam'),
-                      VariationsStyleNoSide('Light'),
-                      VariationsStyleNoSide('Acne'),
-                      VariationsStyleNoSide('Cream'),
-                      VariationsStyleNoSide('Serum'),
+                      VariationsStyle('Black'),
+                      VariationsStyleNoSide('Red'),
+                      VariationsStyleNoSide('White'),
+                      VariationsStyleNoSide('Brown'),
+                      VariationsStyleNoSide('Blue'),
                     ],
                   ),
                   SizedBox(
@@ -241,7 +242,7 @@ class DetailPage4 extends StatelessWidget {
                         height: 16,
                       ),
                       Text(
-                        'Garnier Pure Act is a skincare with various benefits\nand ingredients that are good for the skin.\nChoose a variation and just wait.',
+                        'This smartwatch is the latest technology\nwith many benefits but with a minimalist size.\nChoose your color and just wait.',
                         style: GoogleFonts.montserrat(
                           color: Color(0xffF8F7FD),
                           fontSize: 14,
@@ -368,7 +369,7 @@ class DetailPage4 extends StatelessWidget {
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Text(
-                'Rp27.839',
+                'Rp4.500.000',
                 style: GoogleFonts.montserrat(
                   color: Color(0xffF8F7FD),
                   fontWeight: FontWeight.bold,

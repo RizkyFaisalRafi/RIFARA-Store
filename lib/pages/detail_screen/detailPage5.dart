@@ -1,16 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPag4.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage2.dart';
+import 'package:rifaraclothstore/pages/detail_screen/detailPag4.dart';
+import 'package:rifaraclothstore/pages/detail_screen/detailPage.dart';
 import 'package:rifaraclothstore/pages/cart_page.dart';
 import 'package:rifaraclothstore/pages/order_detail.dart';
 import 'package:rifaraclothstore/style/product_list.dart';
 import 'package:rifaraclothstore/style/variations_tile.dart';
 
+import 'detailPage2.dart';
+import 'detailPage3.dart';
 
-class DetailPage3 extends StatelessWidget {
+
+class DetailPage5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -109,7 +111,7 @@ class DetailPage3 extends StatelessWidget {
               ),
             ),
             Image.asset(
-              'assetsgambar/product_three.png',
+              'assetsgambar/product_five.png',
               width: 375,
               height: 350,
             ),
@@ -129,7 +131,7 @@ class DetailPage3 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Philips LED WI-FI',
+                    'Rexus headphones',
                     style: GoogleFonts.montserrat(
                         color: Colors.white,
                         fontSize: 18,
@@ -179,7 +181,7 @@ class DetailPage3 extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'Rp85.000',
+                        'Rp800.000',
                         style: GoogleFonts.montserrat(
                           color: Color(0xffF8F7FD),
                           fontSize: 18,
@@ -190,7 +192,7 @@ class DetailPage3 extends StatelessWidget {
                         width: 6,
                       ),
                       Text(
-                        'Rp90.000',
+                        'Rp1.000.000',
                         style: GoogleFonts.montserrat(
                             color: Color(0xffF8F7FD),
                             fontSize: 14,
@@ -216,11 +218,11 @@ class DetailPage3 extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      VariationsStyle('12W'),
-                      VariationsStyleNoSide('18W'),
-                      VariationsStyleNoSide('20W'),
-                      VariationsStyleNoSide('25W'),
-                      VariationsStyleNoSide('28W'),
+                      VariationsStyle('Brown'),
+                      VariationsStyleNoSide('Blue'),
+                      VariationsStyleNoSide('White'),
+                      VariationsStyleNoSide('Red'),
+                      VariationsStyleNoSide('Black'),
                     ],
                   ),
                   SizedBox(
@@ -241,7 +243,7 @@ class DetailPage3 extends StatelessWidget {
                         height: 16,
                       ),
                       Text(
-                        'This light bulb is a lamp with various\nbenefits but with a minimalist size.\nChoose your description level and just wait.',
+                        'Rexus headphones are headphones with cool\nsound, loud bass and quality. Choose your color\nand just wait.',
                         style: GoogleFonts.montserrat(
                           color: Color(0xffF8F7FD),
                           fontSize: 14,
@@ -368,7 +370,7 @@ class DetailPage3 extends StatelessWidget {
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Text(
-                'Rp85.000',
+                'Rp800.000',
                 style: GoogleFonts.montserrat(
                   color: Color(0xffF8F7FD),
                   fontWeight: FontWeight.bold,

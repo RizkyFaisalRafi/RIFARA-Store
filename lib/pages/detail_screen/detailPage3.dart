@@ -1,17 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPag4.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage2.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage3.dart';
+import 'package:rifaraclothstore/pages/detail_screen/detailPage.dart';
 import 'package:rifaraclothstore/pages/cart_page.dart';
 import 'package:rifaraclothstore/pages/order_detail.dart';
 import 'package:rifaraclothstore/style/product_list.dart';
 import 'package:rifaraclothstore/style/variations_tile.dart';
 
+import 'detailPag4.dart';
+import 'detailPage2.dart';
 
-class DetailPage6 extends StatelessWidget {
+
+class DetailPage3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,7 +110,7 @@ class DetailPage6 extends StatelessWidget {
               ),
             ),
             Image.asset(
-              'assetsgambar/product_six.png',
+              'assetsgambar/product_three.png',
               width: 375,
               height: 350,
             ),
@@ -130,7 +130,7 @@ class DetailPage6 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Airpods',
+                    'Philips LED WI-FI',
                     style: GoogleFonts.montserrat(
                         color: Colors.white,
                         fontSize: 18,
@@ -159,7 +159,7 @@ class DetailPage6 extends StatelessWidget {
                         height: 14,
                       ),
                       Image.asset(
-                        'assetsgambar/star_kosong.png',
+                        'assetsgambar/star.png',
                         width: 14,
                         height: 14,
                       ),
@@ -180,7 +180,7 @@ class DetailPage6 extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'Rp5.500.000',
+                        'Rp85.000',
                         style: GoogleFonts.montserrat(
                           color: Color(0xffF8F7FD),
                           fontSize: 18,
@@ -191,7 +191,7 @@ class DetailPage6 extends StatelessWidget {
                         width: 6,
                       ),
                       Text(
-                        'Rp6.500.000',
+                        'Rp90.000',
                         style: GoogleFonts.montserrat(
                             color: Color(0xffF8F7FD),
                             fontSize: 14,
@@ -217,11 +217,11 @@ class DetailPage6 extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      VariationsStyle('White'),
-                      VariationsStyleNoSide('Red'),
-                      VariationsStyleNoSide('Blue'),
-                      VariationsStyleNoSide('Black'),
-                      VariationsStyleNoSide('Purple'),
+                      VariationsStyle('12W'),
+                      VariationsStyleNoSide('18W'),
+                      VariationsStyleNoSide('20W'),
+                      VariationsStyleNoSide('25W'),
+                      VariationsStyleNoSide('28W'),
                     ],
                   ),
                   SizedBox(
@@ -242,7 +242,7 @@ class DetailPage6 extends StatelessWidget {
                         height: 16,
                       ),
                       Text(
-                        'These Airpods are Earpods with cool sound,\nloud and quality bass, Enjoy your fun in music.\nChoose your color and just wait.',
+                        'This light bulb is a lamp with various\nbenefits but with a minimalist size.\nChoose your description level and just wait.',
                         style: GoogleFonts.montserrat(
                           color: Color(0xffF8F7FD),
                           fontSize: 14,
@@ -369,7 +369,7 @@ class DetailPage6 extends StatelessWidget {
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Text(
-                'Rp5.500.000',
+                'Rp85.000',
                 style: GoogleFonts.montserrat(
                   color: Color(0xffF8F7FD),
                   fontWeight: FontWeight.bold,

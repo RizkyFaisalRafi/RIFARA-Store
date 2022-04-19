@@ -1,17 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPag4.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage2.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage3.dart';
 import 'package:rifaraclothstore/pages/cart_page.dart';
 import 'package:rifaraclothstore/pages/order_detail.dart';
 import 'package:rifaraclothstore/style/product_list.dart';
 import 'package:rifaraclothstore/style/variations_tile.dart';
 
+import 'detailPag4.dart';
+import 'detailPage.dart';
+import 'detailPage2.dart';
+import 'detailPage3.dart';
 
-class DetailPage5 extends StatelessWidget {
+
+class DetailPage6 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,7 +111,7 @@ class DetailPage5 extends StatelessWidget {
               ),
             ),
             Image.asset(
-              'assetsgambar/product_five.png',
+              'assetsgambar/product_six.png',
               width: 375,
               height: 350,
             ),
@@ -130,7 +131,7 @@ class DetailPage5 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Rexus headphones',
+                    'Airpods',
                     style: GoogleFonts.montserrat(
                         color: Colors.white,
                         fontSize: 18,
@@ -159,7 +160,7 @@ class DetailPage5 extends StatelessWidget {
                         height: 14,
                       ),
                       Image.asset(
-                        'assetsgambar/star.png',
+                        'assetsgambar/star_kosong.png',
                         width: 14,
                         height: 14,
                       ),
@@ -180,7 +181,7 @@ class DetailPage5 extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'Rp800.000',
+                        'Rp5.500.000',
                         style: GoogleFonts.montserrat(
                           color: Color(0xffF8F7FD),
                           fontSize: 18,
@@ -191,7 +192,7 @@ class DetailPage5 extends StatelessWidget {
                         width: 6,
                       ),
                       Text(
-                        'Rp1.000.000',
+                        'Rp6.500.000',
                         style: GoogleFonts.montserrat(
                             color: Color(0xffF8F7FD),
                             fontSize: 14,
@@ -217,11 +218,11 @@ class DetailPage5 extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      VariationsStyle('Brown'),
-                      VariationsStyleNoSide('Blue'),
-                      VariationsStyleNoSide('White'),
+                      VariationsStyle('White'),
                       VariationsStyleNoSide('Red'),
+                      VariationsStyleNoSide('Blue'),
                       VariationsStyleNoSide('Black'),
+                      VariationsStyleNoSide('Purple'),
                     ],
                   ),
                   SizedBox(
@@ -242,7 +243,7 @@ class DetailPage5 extends StatelessWidget {
                         height: 16,
                       ),
                       Text(
-                        'Rexus headphones are headphones with cool\nsound, loud bass and quality. Choose your color\nand just wait.',
+                        'These Airpods are Earpods with cool sound,\nloud and quality bass, Enjoy your fun in music.\nChoose your color and just wait.',
                         style: GoogleFonts.montserrat(
                           color: Color(0xffF8F7FD),
                           fontSize: 14,
@@ -369,7 +370,7 @@ class DetailPage5 extends StatelessWidget {
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Text(
-                'Rp800.000',
+                'Rp5.500.000',
                 style: GoogleFonts.montserrat(
                   color: Color(0xffF8F7FD),
                   fontWeight: FontWeight.bold,

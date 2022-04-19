@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rifaraclothstore/pages/cart_page.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage.dart';
 import '../style/product_list.dart';
+import 'detail_screen/detailPage.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({Key? key}) : super(key: key);

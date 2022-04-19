@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage2.dart';
 import 'package:rifaraclothstore/pages/order_detail.dart';
+
+import 'detail_screen/detailPage.dart';
+import 'detail_screen/detailPage2.dart';
 
 class CartPage extends StatelessWidget {
   @override

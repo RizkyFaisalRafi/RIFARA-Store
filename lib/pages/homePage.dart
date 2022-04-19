@@ -2,11 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPag4.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage2.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage3.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage5.dart';
-import 'package:rifaraclothstore/pages/DetailScreen/detailPage6.dart';
+import 'package:rifaraclothstore/pages/detail_screen/detailPage2.dart';
 import 'package:rifaraclothstore/style/categories_style.dart';
 import 'package:rifaraclothstore/pages/cart_page.dart';
 import 'package:rifaraclothstore/pages/notification_page.dart';
@@ -14,8 +10,11 @@ import 'package:rifaraclothstore/pages/product_page.dart';
 import 'package:rifaraclothstore/pages/profile_page.dart';
 import 'package:rifaraclothstore/pages/searchPage.dart';
 import 'package:rifaraclothstore/style/product_list.dart';
-
-import 'DetailScreen/detailPage.dart';
+import 'detail_screen/detailPag4.dart';
+import 'detail_screen/detailPage.dart';
+import 'detail_screen/detailPage3.dart';
+import 'detail_screen/detailPage5.dart';
+import 'detail_screen/detailPage6.dart';
 
 class HomePage extends StatelessWidget {
   @override
