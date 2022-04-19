@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rifaraclothstore/pages/order_history.dart';
 import 'package:rifaraclothstore/style/categories_style.dart';
 import 'package:rifaraclothstore/pages/create_address.dart';
 import 'package:rifaraclothstore/pages/edit_profile.dart';
@@ -12,8 +13,6 @@ import 'package:rifaraclothstore/pages/product_page.dart';
 
 class ProfilePage extends StatelessWidget {
   final FirebaseAuth auth = FirebaseAuth.instance;
-
-
 
   ProfilePage({Key? key}) : super(key: key);
 
@@ -71,12 +70,20 @@ class ProfilePage extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Text(
-                        'See All',
-                        style: GoogleFonts.montserrat(
-                          color: Color(0xffcfcfcf),
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold,
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => OrderHistory()),
+                          );
+                        },
+                        child: Text(
+                          'See All',
+                          style: GoogleFonts.montserrat(
+                            color: Color(0xffcfcfcf),
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ],
@@ -87,14 +94,46 @@ class ProfilePage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      CategoriesStyle(
-                          'assetsgambar/pending-24px-white.png', 'Pending'),
-                      CategoriesStyle(
-                          'assetsgambar/packed-24px-white.png', 'Packed'),
-                      CategoriesStyle('assetsgambar/on_the_way-24px-white.png',
-                          'On The Way'),
-                      CategoriesStyle(
-                          'assetsgambar/arrived-24px-white.png', 'Arrived'),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => OrderHistory()),
+                          );
+                        },
+                        child: CategoriesStyle(
+                            'assetsgambar/pending-24px-white.png', 'Pending'),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => OrderHistory()),
+                          );
+                        },
+                        child: CategoriesStyle(
+                            'assetsgambar/packed-24px-white.png', 'Packed'),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => OrderHistory()),
+                          );
+                        },
+                        child: CategoriesStyle('assetsgambar/on_the_way-24px-white.png',
+                            'On The Way'),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => OrderHistory()),
+                          );
+                        },
+                        child: CategoriesStyle(
+                            'assetsgambar/arrived-24px-white.png', 'Arrived'),
+                      ),
                     ],
                   ),
                 ),

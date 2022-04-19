@@ -12,6 +12,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  // CheckBox
+  bool agree = false;
 
   // Login Function
   static Future<User?> loginUsingEmailPassword(
@@ -150,19 +152,28 @@ class _LoginPageState extends State<LoginPage> {
                   height: 20,
                   child: Row(
                     children: [
-                      Image.asset('assetsgambar/mini_rectangle.png',
-                        width: 20,
-                      ),
-                      SizedBox(width: 10,),
-                      Text(
-                        'Remember me',
-                        style: GoogleFonts.montserrat(
-                          color: Color(0xfff8f7fd),
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
+                      Expanded(
+                        child: ListTile(
+                          leading: Checkbox(
+                            activeColor: Color(0xff6C5ECF),
+                            value: agree,
+                            onChanged: (bool? value){
+                              setState(() {
+                                agree = value!;
+                              });
+                            },
+                          ),
+                          title: Text(
+                            'Remember me',
+                            style: GoogleFonts.montserrat(
+                              color: Color(0xfff8f7fd),
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
                       ),
-                      SizedBox(width: 64,),
+
                       Text(
                         'Forgot Password?',
                         style: GoogleFonts.montserrat(
