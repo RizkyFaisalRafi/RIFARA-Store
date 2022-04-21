@@ -1,11 +1,12 @@
-# rifaraclothstore
+# RIFARA Store
 **1.  Login: rizkyfaisalrafi123@gmail.com
     password: Dicoding123**
 
 **2.  Login: Dicoding123@gmail.com
     password: Dicoding123**
 
-A new Flutter project.
+**Submission Dicoding Kelas Belajar Membuat Aplikasi Flutter Untuk Pemula**
+
 
 ## Getting Started
 
